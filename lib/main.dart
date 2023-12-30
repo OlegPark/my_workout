@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'features/auth/viev/auth_screen.dart';
+import 'package:my_workout/features/welcome/view/welcome_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const AuthWidget(),
+      home: const WelcomeWidget(),
     );
   }
 }
