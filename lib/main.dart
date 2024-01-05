@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_workout/features/welcome/view/welcome_screen.dart';
+import 'package:my_workout/features/welcome/welcome.dart';
 
 void main() {
   runApp(const MyApp());
