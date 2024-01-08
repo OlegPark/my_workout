@@ -5,18 +5,26 @@ class WelcomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: SafeArea(
+    return Scaffold(
+       body: SafeArea(
+        top: false,
         bottom: false,
-        child: Padding(
-          padding: EdgeInsets.only(right: 15, left: 15, top: 15),
+         child: Container(
+          width: double.infinity,
+          height: double.infinity,
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/images/welcome.png'),
+              fit: BoxFit.cover,
+            ),
+          ),
           child: Column(
             children: [
               
             ],
           ),
-        ),
-      ),
+         ),
+       ),
     );
   }
 }
