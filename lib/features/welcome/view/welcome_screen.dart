@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/welcome_top.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -20,19 +21,7 @@ class WelcomeScreen extends StatelessWidget {
           ),
           child: Column(
             children: [
-              SafeArea(
-                child: Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      GestureDetector(
-                        child: Image.asset('assets/images/points.png'),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              WelcomeTop(),
               Text('Стань лучшей версией себя', style: TextStyle(color: Colors.white, fontSize: 25, fontWeight: FontWeight.bold,),),
             ],
           ),
