@@ -21,13 +21,16 @@ class WelcomeScreen extends StatelessWidget {
           child: Column(
             children: [
               SafeArea(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    GestureDetector(
-                      child: Image.asset('assets/images/back.png'),
-                    ),
-                  ],
+                child: Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      GestureDetector(
+                        child: Image.asset('assets/images/points.png'),
+                      ),
+                    ],
+                  ),
                 ),
               ),
               Text('Стань лучшей версией себя', style: TextStyle(color: Colors.white, fontSize: 25, fontWeight: FontWeight.bold,),),
