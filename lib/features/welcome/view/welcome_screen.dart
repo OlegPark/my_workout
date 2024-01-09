@@ -20,11 +20,15 @@ class WelcomeScreen extends StatelessWidget {
           ),
           child: Column(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-
-                ],
+              SafeArea(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    GestureDetector(
+                      child: Image.asset('assets/images/back.png'),
+                    ),
+                  ],
+                ),
               ),
               Text('Стань лучшей версией себя', style: TextStyle(color: Colors.white, fontSize: 25, fontWeight: FontWeight.bold,),),
             ],
