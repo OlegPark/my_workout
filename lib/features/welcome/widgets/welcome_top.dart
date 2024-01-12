@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 
-class WelcomeTop extends StatelessWidget {
+class WelcomeTop extends StatefulWidget {
   const WelcomeTop({
     super.key,
   });
 
+  @override
+  State<WelcomeTop> createState() => _WelcomeTopState();
+}
+
+class _WelcomeTopState extends State<WelcomeTop> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
