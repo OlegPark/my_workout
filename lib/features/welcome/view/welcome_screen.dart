@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../widgets/welcome_mid.dart';
+import '../widgets/welcome_bot.dart';
 import '../widgets/welcome_top.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -23,7 +23,7 @@ class WelcomeScreen extends StatelessWidget {
           child: const Column(
             children: [
               WelcomeTop(),
-              WelcomeMid(),
+              WelcomeBot(),
             ],
           ),
          ),
