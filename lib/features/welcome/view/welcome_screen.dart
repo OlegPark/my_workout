@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/welcome_mid.dart';
 import '../widgets/welcome_top.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -19,10 +20,10 @@ class WelcomeScreen extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          child: Column(
+          child: const Column(
             children: [
               WelcomeTop(),
-              Text('Стань лучшей версией себя', style: TextStyle(color: Colors.white, fontSize: 25, fontWeight: FontWeight.bold,),),
+              WelcomeMid(),
             ],
           ),
          ),
