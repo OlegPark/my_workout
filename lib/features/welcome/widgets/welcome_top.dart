@@ -14,6 +14,7 @@ class WelcomeTop extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             GestureDetector(
+              onTap: () {},
               child: Image.asset('assets/images/points.png'),
             ),
           ],
