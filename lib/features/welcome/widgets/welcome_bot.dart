@@ -37,7 +37,7 @@ class WelcomeBot extends StatelessWidget {
               borderRadius: BorderRadius.circular(10),
             ),
             height: 47,
-            width: 210,
+            width: 245,
             alignment: Alignment.center,
             child: const Text(
               'Создать аккаунт',
