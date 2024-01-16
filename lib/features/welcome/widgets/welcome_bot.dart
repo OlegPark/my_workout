@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../UI/theme/theme.dart';
 
 class WelcomeBot extends StatelessWidget {
   const WelcomeBot({super.key});
@@ -32,7 +33,7 @@ class WelcomeBot extends StatelessWidget {
         GestureDetector(
           child: Container(
             decoration: BoxDecoration(
-              color: Colors.blue.shade700,
+              color: workoutBlue,
               borderRadius: BorderRadius.circular(10),
             ),
             height: 47,
