@@ -31,6 +31,12 @@ class GenderScreen extends StatelessWidget {
                       },
                       child: Image.asset('assets/images/back.png'),
                     ),
+                    Container(
+                      margin: EdgeInsets.only(left: 80),
+                      child: Image.asset(
+                        'assets/images/20proc.png'
+                      ),
+                    ),
                   ],
                 ),
               ),
