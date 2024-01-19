@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class genderScreen extends StatelessWidget {
-  const genderScreen({super.key});
+class GenderScreen extends StatelessWidget {
+  const GenderScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,24 @@ class genderScreen extends StatelessWidget {
             )
           ),
           child: Column(
-            
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 30, left: 17),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        print('object');
+                      },
+                      child: Image.asset('assets/images/back.png'),
+                    ),
+                  ],
+                ),
+              ),
+              Text('Mid'),
+              Text('Bot'),
+            ],
           ),
         ),
       ),
