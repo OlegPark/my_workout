@@ -33,7 +33,7 @@ class WelcomeBot extends StatelessWidget {
         GestureDetector(
           child: Container(
             decoration: BoxDecoration(
-              color: workoutBlue,
+              color: bottomeBlue,
               borderRadius: BorderRadius.circular(10),
             ),
             height: 47,
