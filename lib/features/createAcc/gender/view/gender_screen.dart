@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/gender_top.dart';
 
 class GenderScreen extends StatelessWidget {
   const GenderScreen({super.key});
@@ -18,28 +19,9 @@ class GenderScreen extends StatelessWidget {
               fit: BoxFit.cover,
             )
           ),
-          child: Column(
+          child: const Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 30, left: 17),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    GestureDetector(
-                      onTap: () {
-                        print('object');
-                      },
-                      child: Image.asset('assets/images/back.png'),
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(left: 80),
-                      child: Image.asset(
-                        'assets/images/20proc.png'
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              TopPanelG(),
               Text('Mid'),
               Text('Bot'),
             ],
@@ -49,3 +31,4 @@ class GenderScreen extends StatelessWidget {
     );
   }
 }
+
