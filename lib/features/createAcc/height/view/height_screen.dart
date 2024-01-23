@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/height_mid.dart';
 import '../widgets/height_top.dart';
 
 class HeightScreen extends StatelessWidget {
@@ -22,7 +23,7 @@ class HeightScreen extends StatelessWidget {
           child: const Column(
             children: [
               TopPanelH(),
-              // MidPanelH(),
+              MidPanelH(),
               // BotPanelH(),
             ],
           ),
