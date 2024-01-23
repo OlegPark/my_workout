@@ -28,8 +28,8 @@ class BotPanelG extends StatelessWidget {
                 ),
               ),
             ),
-                 ),
-         ),
+          ),
+        ),
       ],
     );
   }
