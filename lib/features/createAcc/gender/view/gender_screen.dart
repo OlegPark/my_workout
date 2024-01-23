@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/gender_bot.dart';
 import '../widgets/gender_mid.dart';
 import '../widgets/gender_top.dart';
 
@@ -24,7 +25,7 @@ class GenderScreen extends StatelessWidget {
             children: [
               TopPanelG(),
               MidPanelG(),
-              Text('Bot'),
+              BotPanelG(),
             ],
           ),
         ),

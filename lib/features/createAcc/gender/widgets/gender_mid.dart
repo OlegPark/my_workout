@@ -22,11 +22,11 @@ class MidPanelG extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Container(
-              margin: EdgeInsets.only(top: 34),
+              margin: const EdgeInsets.only(top: 34),
               child: Image.asset('assets/images/man.png'),
             ),
             Container(
-              margin: EdgeInsets.only(top: 34),
+              margin: const EdgeInsets.only(top: 34),
               child: Image.asset('assets/images/woman.png'),
             ),
           ],
