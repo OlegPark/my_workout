@@ -5,14 +5,31 @@ class MidPanelG extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+    return Column(
       children: [
         Container(
-          child: Image.asset('assets/images/man.png'),
+          padding: const EdgeInsets.only(top: 212),
+          child: const Text(
+            'Ваш пол',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 25,
+              fontWeight: FontWeight.w900,
+            ),
+          ),
         ),
-        Container(
-          child: Image.asset('assets/images/woman.png'),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Container(
+              margin: EdgeInsets.only(top: 34),
+              child: Image.asset('assets/images/man.png'),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 34),
+              child: Image.asset('assets/images/woman.png'),
+            ),
+          ],
         ),
       ],
     );
