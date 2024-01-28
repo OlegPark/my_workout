@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widget/weight_top.dart';
 
 class WeightScreen extends StatelessWidget {
   const WeightScreen({super.key});
@@ -20,7 +21,7 @@ class WeightScreen extends StatelessWidget {
           ),
           child: const Column(
             children: [
-              // TopPanelH(),
+              TopPanelW(),
               // MidPanelH(),
               // BotPanelH(),
             ],
