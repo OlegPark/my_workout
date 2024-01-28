@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_workout/features/createAcc/weight/widget/weight_bot.dart';
+import '../widget/weight_bot.dart';
 import '../widget/weight_mid.dart';
 import '../widget/weight_top.dart';
 
