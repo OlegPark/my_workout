@@ -14,7 +14,7 @@ class WeightScreen extends StatelessWidget {
           height: double.infinity,
           decoration: const BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('assets/images/height.png'),
+              image: AssetImage('assets/images/weight.png'),
               fit: BoxFit.cover,
             )
           ),
