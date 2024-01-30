@@ -23,7 +23,7 @@ class MidPanelWeigh extends StatelessWidget {
           '64',
           style: TextStyle(
             color: Colors.grey,
-            fontSize: 15,
+            fontSize: 17,
             fontWeight: FontWeight.w900
           ),
         ),
@@ -32,7 +32,7 @@ class MidPanelWeigh extends StatelessWidget {
           '65',
           style: TextStyle(
             color: Colors.white,
-            fontSize: 17,
+            fontSize: 19,
             fontWeight: FontWeight.w900
           ),
         ),
@@ -41,7 +41,7 @@ class MidPanelWeigh extends StatelessWidget {
           '66',
           style: TextStyle(
             color: Colors.grey,
-            fontSize: 15,
+            fontSize: 17,
             fontWeight: FontWeight.w900
           ),
         ),
