@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import '../../../UI/theme/theme.dart';
 
 class WelcomeBot extends StatelessWidget {
@@ -31,6 +32,7 @@ class WelcomeBot extends StatelessWidget {
           height: 20,
         ),
         GestureDetector(
+          onTap: () => context.go('/gender'),
           child: Container(
             decoration: BoxDecoration(
               color: bottomeBlue,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class TopPanelG extends StatelessWidget {
   const TopPanelG({super.key,});
@@ -11,9 +12,7 @@ class TopPanelG extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           GestureDetector(
-            onTap: () {
-              print('object');
-            },
+            onTap: () => context.pop(),
             child: Image.asset('assets/images/back.png'),
           ),
           Container(
