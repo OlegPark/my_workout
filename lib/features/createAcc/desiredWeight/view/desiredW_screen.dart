@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widget/dweight_bot.dart';
 import '../widget/dweight_mid.dart';
 import '../widget/dweight_top.dart';
 
@@ -24,7 +25,7 @@ class DesiredWScreen extends StatelessWidget {
             children: [
               TopPanelDW(),
               MidPanelDW(),
-              // BotPanelWeigh(),
+              BotPanelDW(),
             ],
           ),
         ),
