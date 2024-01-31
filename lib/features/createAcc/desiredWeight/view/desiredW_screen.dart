@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../widget/dweight_mid.dart';
+import '../widget/dweight_top.dart';
 
 class DesiredWScreen extends StatelessWidget {
   const DesiredWScreen({super.key});
@@ -20,8 +22,8 @@ class DesiredWScreen extends StatelessWidget {
           ),
           child: const Column(
             children: [
-              // TopPanelW(),
-              // MidPanelWeigh(),
+              TopPanelDW(),
+              MidPanelDW(),
               // BotPanelWeigh(),
             ],
           ),
