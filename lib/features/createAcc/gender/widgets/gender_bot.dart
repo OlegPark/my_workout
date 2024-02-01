@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import '../../../../UI/theme/theme.dart';
 
 class BotPanelG extends StatelessWidget {
@@ -11,6 +12,7 @@ class BotPanelG extends StatelessWidget {
          Padding(
            padding: const EdgeInsets.only(top: 220),
            child: GestureDetector(
+            onTap: () => context.go('/height'),
             child: Container(
               decoration: BoxDecoration(
                 color: bottomeBlue,

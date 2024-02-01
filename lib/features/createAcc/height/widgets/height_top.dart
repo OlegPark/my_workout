@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class TopPanelH extends StatelessWidget {
   const TopPanelH({super.key});
@@ -11,9 +12,7 @@ class TopPanelH extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           GestureDetector(
-            onTap: () {
-              print('object');
-            },
+            onTap: () => context.go('/gender'),
             child: Image.asset('assets/images/back.png'),
           ),
           Container(
