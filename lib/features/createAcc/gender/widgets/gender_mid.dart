@@ -8,7 +8,7 @@ class MidPanelG extends StatelessWidget {
     return Column(
       children: [
         Container(
-          padding: const EdgeInsets.only(top: 212),
+          padding: const EdgeInsets.only(top: 180),
           child: const Text(
             'Ваш пол',
             style: TextStyle(

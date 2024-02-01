@@ -10,7 +10,7 @@ class BotPanelG extends StatelessWidget {
     return Column(
       children: [
          Padding(
-           padding: const EdgeInsets.only(top: 220),
+           padding: const EdgeInsets.only(top: 245),
            child: GestureDetector(
             onTap: () => context.go('/height'),
             child: Container(
