@@ -1,8 +1,9 @@
 import 'package:go_router/go_router.dart';
+import 'package:my_workout/features/welcome/welcome.dart';
 import 'package:my_workout/features/createAcc/gender/gender.dart';
 import 'package:my_workout/features/createAcc/height/height.dart';
-import 'package:my_workout/features/createAcc/weight/view/view.dart';
-import 'package:my_workout/features/welcome/view/view.dart';
+import 'package:my_workout/features/createAcc/weight/weight.dart';
+
 
 final router = GoRouter(
   routes: [
