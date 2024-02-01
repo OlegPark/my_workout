@@ -16,7 +16,7 @@ class TopPanelW extends StatelessWidget {
             child: Image.asset('assets/images/back.png'),
           ),
           Container(
-            margin: const EdgeInsets.only(left: 80),
+            margin: const EdgeInsets.only(left: 65),
             child: Image.asset(
               'assets/images/60proc.png'
             ),
