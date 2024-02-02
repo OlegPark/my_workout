@@ -55,6 +55,7 @@ class WelcomeBot extends StatelessWidget {
           height: 29,
         ),
         GestureDetector(
+          onTap: () => context.go('/auth'),
           child: const Text(
             'Уже зарегистрированы? Войти',
             style: TextStyle(

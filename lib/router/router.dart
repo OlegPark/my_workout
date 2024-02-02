@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:my_workout/features/auth/viev/auth_screen.dart';
 import 'package:my_workout/features/createAcc/desiredWeight/view/desiredW_screen.dart';
 import 'package:my_workout/features/welcome/welcome.dart';
 import 'package:my_workout/features/createAcc/gender/gender.dart';
@@ -29,6 +30,10 @@ final router = GoRouter(
           builder: (context, state) => const DesiredWScreen(),
         ),
       ],
+    ),
+    GoRoute(
+      path: '/auth',
+      builder: (context, state) => const AuthScreen(),
     ),
   ],
 );
