@@ -8,7 +8,7 @@ class MidPanelDW extends StatelessWidget {
     return Column(
       children: [
         Container(
-          padding: const EdgeInsets.only(top: 200),
+          padding: const EdgeInsets.only(top: 180),
           child: const Text(
             'Желаемый',
             style: TextStyle(
