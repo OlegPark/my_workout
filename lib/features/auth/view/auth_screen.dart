@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widget/auth_top.dart';
+
 class AuthScreen extends StatelessWidget {
   const AuthScreen({super.key});
 
@@ -21,7 +23,7 @@ class AuthScreen extends StatelessWidget {
           ),
           child: const Column(
             children: [
-              // TopPanelG(),
+              TopPanelAuth(),
               // MidPanelG(),
               // BotPanelG(),
             ],
