@@ -9,18 +9,16 @@ class TopPanelG extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 50, left: 17),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           GestureDetector(
             onTap: () => context.pop(),
             child: Image.asset('assets/images/back.png'),
           ),
-          Container(
-            margin: const EdgeInsets.only(left: 65),
-            child: Image.asset(
-              'assets/images/20proc.png'
-            ),
+          Image.asset(
+            'assets/images/20proc.png'
           ),
+          const SizedBox(width: 23),
         ],
       ),
     );
