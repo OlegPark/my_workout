@@ -6,20 +6,41 @@ class MidPanelAuth extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        CupertinoTextField(
-          placeholder: 'Email',
-          placeholderStyle: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 20,
-            color: Colors.grey[400],
+    return Padding(
+      padding: const EdgeInsets.all(18.0),
+      child: Column(
+        children: [
+          const SizedBox(height: 37,),
+          CupertinoTextField(
+            padding: const EdgeInsets.all(18),
+            placeholder: 'Email',
+            placeholderStyle: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 20,
+              color: Colors.grey[400],
+            ),
+            decoration: BoxDecoration(
+              color: CupertinoColors.extraLightBackgroundGray,
+              borderRadius: BorderRadius.circular(10),
+            ),
           ),
-        ),
-        CupertinoTextField(
-          placeholder: 'Пароль',
-        ),
-      ],
+          const SizedBox(height: 40,),
+          CupertinoTextField(
+            padding: const EdgeInsets.all(18),
+            placeholder: 'Пароль',
+            obscureText: true,
+            placeholderStyle: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 20,
+              color: Colors.grey[400],
+            ),
+            decoration: BoxDecoration(
+              color: CupertinoColors.extraLightBackgroundGray,
+              borderRadius: BorderRadius.circular(10),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
