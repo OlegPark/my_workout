@@ -10,6 +10,11 @@ class MidPanelAuth extends StatelessWidget {
       children: [
         CupertinoTextField(
           placeholder: 'Email',
+          placeholderStyle: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 20,
+            color: Colors.grey[400],
+          ),
         ),
         CupertinoTextField(
           placeholder: 'Пароль',
