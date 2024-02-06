@@ -1,6 +1,7 @@
 import 'package:go_router/go_router.dart';
 import 'package:my_workout/features/auth/view/auth_screen.dart';
 import 'package:my_workout/features/createAcc/desiredWeight/view/desiredW_screen.dart';
+import 'package:my_workout/features/createAcc/performance/view/performance_screen.dart';
 import 'package:my_workout/features/welcome/welcome.dart';
 import 'package:my_workout/features/createAcc/gender/gender.dart';
 import 'package:my_workout/features/createAcc/height/height.dart';
@@ -28,6 +29,10 @@ final router = GoRouter(
         GoRoute(
           path: 'dweight',
           builder: (context, state) => const DesiredWScreen(),
+        ),
+        GoRoute(
+          path: 'perfomance',
+          builder: (context, state) => const PerfomanceScreen(),
         ),
       ],
     ),
