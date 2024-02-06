@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_workout/features/auth/widget/auth_mid.dart';
-
+import '../widget/auth_mid.dart';
+import '../widget/auth_bot.dart';
 import '../widget/auth_top.dart';
 
 class AuthScreen extends StatelessWidget {
@@ -26,7 +26,7 @@ class AuthScreen extends StatelessWidget {
             children: [
               TopPanelAuth(),
               MidPanelAuth(),
-              // BotPanelG(),
+              BotPanelAuth(),
             ],
           ),
         ),
