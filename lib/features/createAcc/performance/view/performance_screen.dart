@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widget/perfomance_mid.dart';
 import '../widget/perfomance_top.dart';
 
 class PerfomanceScreen extends StatelessWidget {
@@ -22,7 +23,7 @@ class PerfomanceScreen extends StatelessWidget {
           child: const Column(
             children: [
               TopPanelPerf(),
-              // MidPanelWeigh(),
+              MidPanelPerf(),
               // BotPanelWeigh(),
             ],
           ),
