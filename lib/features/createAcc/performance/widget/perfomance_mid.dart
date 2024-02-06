@@ -65,13 +65,26 @@ class MidPanelPerf extends StatelessWidget {
           ],
         ),
         const SizedBox(height: 10),
-        const Text(
-          '75',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 19,
-            fontWeight: FontWeight.w900
-          ),
+        Row(
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                border: Border.all(color: const Color.fromARGB(255, 100, 100, 100), width: 3),
+              ),
+              height: 40,
+              width: 100,
+              alignment: Alignment.center,
+              child: const Text(
+                'Далее',
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w900,
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ],
         ),
         const SizedBox(height: 25),
         const Text(
