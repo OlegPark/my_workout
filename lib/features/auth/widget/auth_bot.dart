@@ -32,14 +32,16 @@ class BotPanelAuth extends StatelessWidget {
             ),
           ),
         ),
-        GestureDetector(
-          onTap: () => context.go('/auth'),
-          child: const Text(
-            'Забыли пароль?',
-            style: TextStyle(
-              fontSize: 15,
-              fontWeight: FontWeight.w900,
-              color: Colors.white,
+        Padding(
+          padding: const EdgeInsets.only(top: 15),
+          child: GestureDetector(
+            child: const Text(
+              'Забыли пароль?',
+              style: TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.w900,
+                color: Colors.white,
+              ),
             ),
           ),
         ),
