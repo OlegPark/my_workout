@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../../../UI/theme/theme.dart';
 
 class MidPanelSign extends StatelessWidget {
   const MidPanelSign({super.key});
@@ -7,7 +8,7 @@ class MidPanelSign extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Padding(
-        padding: const EdgeInsets.only(left: 37, right: 37),
+        padding: const EdgeInsets.only(left: 36, right: 36),
         child: Column(
           children: [
             Container(
@@ -21,14 +22,90 @@ class MidPanelSign extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 46),
-            TextField(),
+            const SizedBox(height: 180),
+            const TextField(
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.white
+              ),
+              decoration: InputDecoration(
+                hintText: 'Имя',
+                hintStyle: wText,
+                enabledBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Colors.white,
+                  ),
+                ),
+                focusedBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Colors.white,
+                  )
+                )
+              ),
+            ),
             const SizedBox(height: 25),
-            TextField(),
+            const TextField(
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.white
+              ),
+              decoration: InputDecoration(
+                hintText: 'Фамилия',
+                hintStyle: wText,
+                enabledBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Colors.white,
+                  ),
+                ),
+                focusedBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Colors.white,
+                  )
+                )
+              ),
+            ),
             const SizedBox(height: 25),
-            TextField(),
+            const TextField(
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.white
+              ),
+              decoration: InputDecoration(
+                hintText: 'Email',
+                hintStyle: wText,
+                enabledBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Colors.white,
+                  ),
+                ),
+                focusedBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Colors.white,
+                  )
+                )
+              ),
+            ),
             const SizedBox(height: 25),
-            TextField(),
+            const TextField(
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.white
+              ),
+              decoration: InputDecoration(
+                hintText: 'Пароль',
+                hintStyle: wText,
+                enabledBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Colors.white,
+                  ),
+                ),
+                focusedBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Colors.white,
+                  )
+                )
+              ),
+            ),
           ],
         ),
       ),

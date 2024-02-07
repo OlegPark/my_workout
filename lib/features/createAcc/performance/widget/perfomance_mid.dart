@@ -114,7 +114,7 @@ class MidPanelPerf extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  'подтягиваний',
+                  'приседаний',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 14,
@@ -134,7 +134,7 @@ class MidPanelPerf extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  'отжиманий',
+                  'брусья',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 14,

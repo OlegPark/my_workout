@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_workout/features/createAcc/signup/widget/signup_bot.dart';
 import '../widget/signup_top.dart';
 import '../widget/signup_mid.dart';
 
@@ -25,7 +26,7 @@ class SignUpScreen extends StatelessWidget {
             children: [
               TopPanelSign(),
               MidPanelSign(),
-              // BotPanelH(),
+              BotPanelSign(),
             ],
           ),
         ),
