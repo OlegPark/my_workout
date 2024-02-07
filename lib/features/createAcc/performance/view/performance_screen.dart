@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_workout/features/createAcc/performance/widget/perfomance_bot.dart';
 import '../widget/perfomance_mid.dart';
 import '../widget/perfomance_top.dart';
 
@@ -8,6 +9,7 @@ class PerfomanceScreen extends StatelessWidget {
  @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: SafeArea(
         top: false,
         bottom: false,
@@ -24,7 +26,7 @@ class PerfomanceScreen extends StatelessWidget {
             children: [
               TopPanelPerf(),
               MidPanelPerf(),
-              // BotPanelWeigh(),
+              BotPanelPerf(),
             ],
           ),
         ),

@@ -66,6 +66,7 @@ class MidPanelPerf extends StatelessWidget {
         ),
         const SizedBox(height: 10),
         Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Container(
               decoration: BoxDecoration(
@@ -75,25 +76,98 @@ class MidPanelPerf extends StatelessWidget {
               height: 40,
               width: 100,
               alignment: Alignment.center,
-              child: const Text(
-                'Далее',
-                style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.w900,
-                  color: Colors.white,
-                ),
+              // child: TextField(
+              //   textAlign: TextAlign.center,
+              //   style: TextStyle(fontSize: 20, color: Colors.grey, fontWeight: FontWeight.w900),
+              //   keyboardType: TextInputType.number,
+              //   decoration: InputDecoration(
+              //     border: InputBorder.none,
+              //     // hintText: '0',
+              //   ),
+              //   maxLength: 4,
+              //   maxLengthEnforcement: MaxLengthEnforcement.enforced,
+              // ),
+            ),
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                border: Border.all(color: const Color.fromARGB(255, 100, 100, 100), width: 3),
               ),
+              height: 40,
+              width: 100,
+              alignment: Alignment.center,
             ),
           ],
         ),
-        const SizedBox(height: 25),
-        const Text(
-          '76',
-          style: TextStyle(
-            color: Colors.grey,
-            fontSize: 17,
-            fontWeight: FontWeight.w900
-          ),
+        const SizedBox(height: 35),
+        const Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Column(
+              children: [
+                Text(
+                  'Макс.',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w900
+                  ),
+                ),
+                Text(
+                  'подтягиваний',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w900
+                  ),
+                ),
+              ],
+            ),
+            Column(
+              children: [
+                Text(
+                  'Макс.',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w900
+                  ),
+                ),
+                Text(
+                  'отжиманий',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w900
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+        const SizedBox(height: 10),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                border: Border.all(color: const Color.fromARGB(255, 100, 100, 100), width: 3),
+              ),
+              height: 40,
+              width: 100,
+              alignment: Alignment.center,
+            ),
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                border: Border.all(color: const Color.fromARGB(255, 100, 100, 100), width: 3),
+              ),
+              height: 40,
+              width: 100,
+              alignment: Alignment.center,
+            ),
+          ],
         ),
       ],
     );
