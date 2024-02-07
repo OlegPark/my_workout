@@ -12,7 +12,7 @@ class BotPanelAuth extends StatelessWidget {
          Padding(
            padding: const EdgeInsets.only(top: 40),
            child: GestureDetector(
-            onTap: () => context.go('/height'),
+            onTap: () => context.go('/'),
             child: Container(
               decoration: BoxDecoration(
                 color: bottomeBlue,

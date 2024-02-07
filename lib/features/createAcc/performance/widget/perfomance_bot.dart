@@ -12,7 +12,7 @@ class BotPanelPerf extends StatelessWidget {
          Padding(
            padding: const EdgeInsets.only(top: 190),
            child: GestureDetector(
-            onTap: () => context.go('/'),
+            onTap: () => context.go('/signup'),
             child: Container(
               decoration: BoxDecoration(
                 color: bottomeBlue,
