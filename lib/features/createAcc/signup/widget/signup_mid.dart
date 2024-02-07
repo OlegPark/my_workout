@@ -5,28 +5,33 @@ class MidPanelSign extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          padding: const EdgeInsets.only(top: 80),
-          child: const Text(
-            'Зарегистрироваться',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 25,
-              fontWeight: FontWeight.w900,
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.only(left: 37, right: 37),
+        child: Column(
+          children: [
+            Container(
+              padding: const EdgeInsets.only(top: 80),
+              child: const Text(
+                'Зарегистрироваться',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 25,
+                  fontWeight: FontWeight.w900,
+                ),
+              ),
             ),
-          ),
+            const SizedBox(height: 46),
+            TextField(),
+            const SizedBox(height: 25),
+            TextField(),
+            const SizedBox(height: 25),
+            TextField(),
+            const SizedBox(height: 25),
+            TextField(),
+          ],
         ),
-        const SizedBox(height: 46),
-        TextField(),
-        const SizedBox(height: 25),
-        TextField(),
-        const SizedBox(height: 25),
-        TextField(),
-        const SizedBox(height: 25),
-        TextField(),
-      ],
+      ),
     );
   }
 }
