@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_workout/features/createAcc/signup/widget/signup_top.dart';
+import '../widget/signup_top.dart';
+import '../widget/signup_mid.dart';
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
@@ -22,7 +23,7 @@ class SignUpScreen extends StatelessWidget {
           child: const Column(
             children: [
               TopPanelSign(),
-              // MidPanelH(),
+              MidPanelSign(),
               // BotPanelH(),
             ],
           ),
