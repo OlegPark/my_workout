@@ -6,9 +6,17 @@ class TopPanelHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: const Text(
-        'Home'
-        ),
+      title: const Text('Home'),
+      centerTitle: true,
+      actions: [
+        IconButton(
+          onPressed: () {},
+          icon: Icon(
+            Icons.settings
+          ),
+        )
+      ],
+      backgroundColor: Colors.black,
     );
   }
 }
