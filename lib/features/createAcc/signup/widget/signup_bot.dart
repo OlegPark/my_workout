@@ -12,7 +12,7 @@ class BotPanelSign extends StatelessWidget {
          Padding(
            padding: const EdgeInsets.only(top: 60),
            child: GestureDetector(
-            // onTap: () => context.go('/'),
+            onTap: () => context.go('/home'),
             child: Container(
               decoration: BoxDecoration(
                 color: bottomeBlue,
