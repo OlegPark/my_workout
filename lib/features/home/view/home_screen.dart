@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_workout/UI/theme/theme.dart';
+import 'package:my_workout/features/home/widgets/home%20bot.dart';
 import 'package:my_workout/features/home/widgets/home_top.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -16,7 +17,7 @@ class HomeScreen extends StatelessWidget {
           children: [
               TopPanelHome(),
               // MidPanelH(),
-              // BotPanelH(),
+              BotPanelHome(),
           ],
         ),
       ),
