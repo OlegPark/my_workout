@@ -5,8 +5,25 @@ class BotPanelHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BottomAppBar(
-      color: Colors.amber,
+    return NavigationBar(
+      destinations: [
+        NavigationDestination(
+          icon: Icon(Icons.home),
+          label: 'Home'
+        ),
+         NavigationDestination(
+          icon: Icon(Icons.explore),
+          label: 'Explore'
+        ),
+         NavigationDestination(
+          icon: Icon(Icons.person),
+          label: 'Person'
+        ),
+         NavigationDestination(
+          icon: Icon(Icons.settings),
+          label: 'Settings'
+        ),
+      ],
     );
   }
 }
