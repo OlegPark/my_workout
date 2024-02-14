@@ -1,29 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
 
-class BotPanelHome extends StatelessWidget {
+class BotPanelHome extends StatefulWidget {
   const BotPanelHome({super.key});
 
   @override
+  State<BotPanelHome> createState() => _BotPanelHomeState();
+}
+
+class _BotPanelHomeState extends State<BotPanelHome> {
+  @override
   Widget build(BuildContext context) {
-    return NavigationBar(
-      destinations: [
-        NavigationDestination(
-          icon: Icon(Icons.home),
-          label: 'Home'
-        ),
-         NavigationDestination(
-          icon: Icon(Icons.explore),
-          label: 'Explore'
-        ),
-         NavigationDestination(
-          icon: Icon(Icons.person),
-          label: 'Person'
-        ),
-         NavigationDestination(
-          icon: Icon(Icons.settings),
-          label: 'Settings'
-        ),
-      ],
+    return const Scaffold(
+      bottomNavigationBar: GNav(
+        gap: 8,
+        tabs: [
+          GButton(
+            icon: Icons.home,
+            text: 'Дмой',
+          ),
+          GButton(
+            icon: Icons.favorite_border,
+            text: 'Старт тренировки',
+          ),
+          GButton(
+            icon: Icons.person,
+            text: 'Профиль',
+          ),
+        ]
+      ),
     );
   }
 }
