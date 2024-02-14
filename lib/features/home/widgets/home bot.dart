@@ -23,7 +23,7 @@ class _BotPanelHomeState extends State<BotPanelHome> {
           ),
           GButton(
             icon: Icons.favorite_border,
-            text: 'Старт тренировки',
+            text: 'Старт',
           ),
           GButton(
             icon: Icons.person,
