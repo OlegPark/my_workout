@@ -11,8 +11,10 @@ class BotPanelHome extends StatefulWidget {
 class _BotPanelHomeState extends State<BotPanelHome> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      bottomNavigationBar: GNav(
+    return const GNav(
+        backgroundColor: Colors.black,
+        color: Colors.grey,
+        activeColor: Colors.white,
         gap: 8,
         tabs: [
           GButton(
@@ -28,7 +30,6 @@ class _BotPanelHomeState extends State<BotPanelHome> {
             text: 'Профиль',
           ),
         ]
-      ),
-    );
+      );
   }
 }
