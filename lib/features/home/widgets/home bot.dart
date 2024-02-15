@@ -11,10 +11,13 @@ class BotPanelHome extends StatefulWidget {
 class _BotPanelHomeState extends State<BotPanelHome> {
   @override
   Widget build(BuildContext context) {
-    return const GNav(
+    return GNav(
         backgroundColor: Colors.black,
         color: Colors.grey,
         activeColor: Colors.white,
+        onTabChange: (index) {
+          print(index);
+        },
         gap: 8,
         tabs: [
           GButton(
