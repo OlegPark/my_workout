@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:my_workout/UI/theme/theme.dart';
-import 'package:my_workout/features/home/widgets/home%20bot.dart';
 import 'package:my_workout/features/home/widgets/home_top.dart';
 
 class HomeScreen extends StatefulWidget {
