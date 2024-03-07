@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:my_workout/features/auth/auth.dart';
 import 'package:my_workout/features/createAcc/desiredWeight/desiredWeight.dart';
@@ -18,12 +19,25 @@ final router = GoRouter(
       routes: [
         GoRoute(
           path: 'gender',
-          builder: (context, state) => const GenderScreen(),
+          pageBuilder: (context, state) {
+            return CustomTransitionPage(
+              transitionDuration: const Duration(seconds: 4),
+              key: state.pageKey,
+              child: const GenderScreen(),
+              transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                return FadeTransition(
+                  opacity:
+                  CurveTween(curve: Curves.easeInOutCirc).animate(animation),
+                  child: child,
+                );
+              },
+            );
+          },
         ),
         GoRoute(
           path: 'height',
           builder: (context, state) => const HeightScreen(),
-        ),
+        ),           
         GoRoute(
           path: 'weight',
           builder: (context, state) => const WeightScreen(),
