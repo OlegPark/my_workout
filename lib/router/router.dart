@@ -21,7 +21,7 @@ final router = GoRouter(
           path: 'gender',
           pageBuilder: (context, state) {
             return CustomTransitionPage(
-              transitionDuration: const Duration(seconds: 4),
+              transitionDuration: const Duration(seconds: 1),
               key: state.pageKey,
               child: const GenderScreen(),
               transitionsBuilder: (context, animation, secondaryAnimation, child) {
