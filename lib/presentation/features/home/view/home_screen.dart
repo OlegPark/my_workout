@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:my_workout/UI/theme/theme.dart';
-import 'package:my_workout/features/home/widgets/home_top.dart';
+import 'package:my_workout/presentation/UI/theme/theme.dart';
+import 'package:my_workout/presentation/features/home/widgets/home_top.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

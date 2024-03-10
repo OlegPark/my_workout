@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_workout/features/createAcc/performance/widget/perfomance_bot.dart';
+import 'package:my_workout/presentation/features/createAcc/performance/widget/perfomance_bot.dart';
 import '../widget/perfomance_mid.dart';
 import '../widget/perfomance_top.dart';
 

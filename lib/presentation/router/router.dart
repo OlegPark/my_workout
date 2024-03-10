@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:my_workout/features/auth/auth.dart';
-import 'package:my_workout/features/createAcc/desiredWeight/desiredWeight.dart';
-import 'package:my_workout/features/createAcc/performance/performance.dart';
-import 'package:my_workout/features/createAcc/signup/signup.dart';
-import 'package:my_workout/features/home/home.dart';
-import 'package:my_workout/features/welcome/welcome.dart';
-import 'package:my_workout/features/createAcc/gender/gender.dart';
-import 'package:my_workout/features/createAcc/height/height.dart';
-import 'package:my_workout/features/createAcc/weight/weight.dart';
+import 'package:my_workout/presentation/features/auth/auth.dart';
+import 'package:my_workout/presentation/features/createAcc/desiredWeight/desiredWeight.dart';
+import 'package:my_workout/presentation/features/createAcc/performance/performance.dart';
+import 'package:my_workout/presentation/features/createAcc/signup/signup.dart';
+import 'package:my_workout/presentation/features/home/home.dart';
+import 'package:my_workout/presentation/features/welcome/welcome.dart';
+import 'package:my_workout/presentation/features/createAcc/gender/gender.dart';
+import 'package:my_workout/presentation/features/createAcc/height/height.dart';
+import 'package:my_workout/presentation/features/createAcc/weight/weight.dart';
 
 
 final router = GoRouter(
