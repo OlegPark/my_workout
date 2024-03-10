@@ -19,9 +19,6 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: Colors.black,
         color: Colors.grey,
         activeColor: Colors.white,
-        // onTabChange: (index) {
-        //   print(index);
-        // },
         gap: 8,
         tabs: [
           GButton(
