@@ -34,10 +34,23 @@ final router = GoRouter(
             );
           },
         ),
-        GoRoute(
+         GoRoute(
           path: 'height',
-          builder: (context, state) => const HeightScreen(),
-        ),           
+          pageBuilder: (context, state) {
+            return CustomTransitionPage(
+              transitionDuration: const Duration(seconds: 1),
+              key: state.pageKey,
+              child: const HeightScreen(),
+              transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                return FadeTransition(
+                  opacity:
+                  CurveTween(curve: Curves.easeInOutCirc).animate(animation),
+                  child: child,
+                );
+              },
+            );
+          },
+        ),    
         GoRoute(
           path: 'weight',
           builder: (context, state) => const WeightScreen(),
