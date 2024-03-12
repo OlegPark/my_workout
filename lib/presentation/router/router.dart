@@ -34,7 +34,7 @@ final router = GoRouter(
             );
           },
         ),
-         GoRoute(
+        GoRoute(
           path: 'height',
           pageBuilder: (context, state) {
             return CustomTransitionPage(
@@ -50,11 +50,24 @@ final router = GoRouter(
               },
             );
           },
-        ),    
+        ),
         GoRoute(
           path: 'weight',
-          builder: (context, state) => const WeightScreen(),
-        ),
+          pageBuilder: (context, state) {
+            return CustomTransitionPage(
+              transitionDuration: const Duration(seconds: 1),
+              key: state.pageKey,
+              child: const WeightScreen(),
+              transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                return FadeTransition(
+                  opacity:
+                  CurveTween(curve: Curves.easeInOutCirc).animate(animation),
+                  child: child,
+                );
+              },
+            );
+          },
+        ),   
         GoRoute(
           path: 'dweight',
           builder: (context, state) => const DesiredWScreen(),
