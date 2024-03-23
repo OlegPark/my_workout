@@ -67,10 +67,23 @@ final router = GoRouter(
               },
             );
           },
-        ),   
-        GoRoute(
+        ),
+         GoRoute(
           path: 'dweight',
-          builder: (context, state) => const DesiredWScreen(),
+          pageBuilder: (context, state) {
+            return CustomTransitionPage(
+              transitionDuration: const Duration(seconds: 1),
+              key: state.pageKey,
+              child: const DesiredWScreen(),
+              transitionsBuilder: (context, animation, secondaryAnimation, child) {
+                return FadeTransition(
+                  opacity:
+                  CurveTween(curve: Curves.easeInOutCirc).animate(animation),
+                  child: child,
+                );
+              },
+            );
+          },
         ),
         GoRoute(
           path: 'perfomance',
