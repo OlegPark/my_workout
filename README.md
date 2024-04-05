@@ -7,7 +7,7 @@
 ![Static Badge](https://img.shields.io/badge/Platform-Android%20%7C%20IOS%20%7C%20Web-green)
 
 </div>
-## Getting Started
+Joint fitness app project
 
 This project is a starting point for a Flutter application.
 
