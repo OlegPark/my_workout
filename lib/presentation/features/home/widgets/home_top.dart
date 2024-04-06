@@ -5,18 +5,12 @@ class TopPanelHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AppBar(
-      title: const Text('Home'),
-      centerTitle: true,
-      actions: [
-        IconButton(
-          onPressed: () {},
-          icon: Icon(
-            Icons.settings
-          ),
-        )
-      ],
-      backgroundColor: Colors.black,
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.only(top: 130),
+        child: Image(
+          image: AssetImage('assets/images/createW.png')),
+      ),
     );
   }
 }
