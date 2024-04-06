@@ -3,6 +3,8 @@ import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:my_workout/presentation/UI/theme/theme.dart';
 import 'package:my_workout/presentation/features/home/widgets/home_top.dart';
 
+import '../widgets/home_mid.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -41,7 +43,7 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           children: [
               TopPanelHome(),
-              // MidPanelH(),
+              CreateWMid(),
               // BotPanelHome(),
           ],
         ),
