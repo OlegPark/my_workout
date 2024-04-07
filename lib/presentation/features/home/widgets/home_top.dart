@@ -7,7 +7,7 @@ class TopPanelHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Padding(
-        padding: const EdgeInsets.only(top: 130),
+        padding: const EdgeInsets.only(top: 120),
         child: Image(
           image: AssetImage('assets/images/createW.png')),
       ),
