@@ -5,8 +5,8 @@ class CreateWMid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 22),
+    return const Padding(
+      padding: EdgeInsets.only(top: 22),
       child: Column(
         children: [
           Text(
@@ -17,7 +17,6 @@ class CreateWMid extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
-          // SizedBox(height: 5),
           Text(
             'личную тренировку',
             style: TextStyle(
@@ -35,7 +34,6 @@ class CreateWMid extends StatelessWidget {
               fontWeight: FontWeight.normal,
             ),
           ),
-          // SizedBox(height: 5),
           Text(
             'программу тренировок',
             style: TextStyle(
