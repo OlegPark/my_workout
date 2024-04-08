@@ -25,11 +25,11 @@ class _HomeScreenState extends State<HomeScreen> {
         gap: 8,
         tabs: [
           GButton(
-            icon: Icons.home,
-            text: 'Дмой',
+            icon: Icons.create,
+            text: 'Персонализ',
           ),
           GButton(
-            icon: Icons.favorite_border,
+            icon: Icons.fitness_center,
             text: 'Старт',
           ),
           GButton(
