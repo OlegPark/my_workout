@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:my_workout/presentation/UI/theme/theme.dart';
 import 'package:my_workout/presentation/features/createW/widgets/createW_top.dart';
-
 import '../widgets/createW_bot.dart';
 import '../widgets/createW_mid.dart';
 
