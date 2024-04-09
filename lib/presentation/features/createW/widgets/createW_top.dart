@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class TopPanelHome extends StatelessWidget {
-  const TopPanelHome({super.key});
+class CReateWTop extends StatelessWidget {
+  const CReateWTop({super.key});
 
   @override
   Widget build(BuildContext context) {
