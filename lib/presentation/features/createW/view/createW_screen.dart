@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:my_workout/presentation/UI/theme/theme.dart';
-import 'package:my_workout/presentation/features/home/widgets/home_top.dart';
+import 'package:my_workout/presentation/features/createW/widgets/createW_top.dart';
 
-import '../widgets/home bot.dart';
-import '../widgets/home_mid.dart';
+import '../widgets/createW_bot.dart';
+import '../widgets/createW_mid.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class CreateWScreen extends StatefulWidget {
+  const CreateWScreen({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<CreateWScreen> createState() => _CreateWScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _CreateWScreenState extends State<CreateWScreen> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
@@ -43,7 +43,7 @@ class _HomeScreenState extends State<HomeScreen> {
         bottom: false,
         child: Column(
           children: [
-              TopPanelHome(),
+              CReateWTop(),
               CreateWMid(),
               CreateWBot(),
           ],
