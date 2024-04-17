@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class CreateWBot extends StatelessWidget {
   const CreateWBot({super.key});
@@ -8,7 +9,7 @@ class CreateWBot extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 63),
       child: GestureDetector(
-        onTap: () {},
+        onTap: () => context.go('/createW1'),
         child: Container(
           decoration: BoxDecoration(
             color: Colors.grey[800],
