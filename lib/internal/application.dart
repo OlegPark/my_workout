@@ -11,4 +11,4 @@ class MyApp extends StatelessWidget {
       routerConfig: router,
     );
   }
-}
+} 
