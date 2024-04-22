@@ -9,6 +9,7 @@ class CreateW1Screen extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.grey[800],
         body: SafeArea(
           child: Column(
             children: [
