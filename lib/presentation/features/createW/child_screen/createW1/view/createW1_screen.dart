@@ -7,8 +7,7 @@ class CreateW1Screen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return Scaffold(
         backgroundColor: Colors.grey[800],
         body: SafeArea(
           child: Column(
@@ -18,7 +17,6 @@ class CreateW1Screen extends StatelessWidget {
             ],
           )
         ),
-      ),
     );
   }
 }
