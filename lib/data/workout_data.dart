@@ -4,11 +4,12 @@ import '../domain/models/workout.dart';
 
 class WorkoutData {
   List<Workout> workoutList = [
+    // тренировка по умолчанию стандартный пример
     Workout(
-      name: 'Upper body',
+      name: 'Верх тела',
       exercise: [
         Exercise(
-          name: "Biceps",
+          name: "бицепс",
           weight: "10",
           reps: "10",
           sets: "3",
@@ -17,4 +18,13 @@ class WorkoutData {
     ),
   ];
   
+  // метод для получения списка тренировок
+  List<Workout> getWorkoutList() {
+    return workoutList;
+  }
+
+  // добавить тренировку
+  // добавить упржнение
+  // отметить упражнение после его завершения
+  // продолжительность тренировки
 }
