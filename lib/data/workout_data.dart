@@ -31,8 +31,9 @@ class WorkoutData {
 
   // добавить упржнение
   void addExercise(String workoutName, String exerciseName, String weight, String reps, String sets) {
-    // find the relevant workout
-    Workout relevantWorkout = workoutList.firstWhere((workout) => workout.name == workoutName);
+
+    Workout relevantWorkout = getRelevantWorkout(workoutName);
+    
     relevantWorkout.exercise.add(
       Exercise(
         name: exerciseName,
@@ -44,5 +45,16 @@ class WorkoutData {
   }
 
   // отметить упражнение после его завершения
+  void checkOffExercise(String workoutName, String exerciseName) {
+    // kakuy trenirovku mi rassmatrivaem
+
+  }
+
   // продолжительность тренировки
+
+  Workout getRelevantWorkout(String workoutName) {
+    // находим подходящую тренировку
+    Workout relevantWorkout = workoutList.firstWhere((workout) => workout.name == workoutName);
+    return relevantWorkout;
+  }
 }
