@@ -23,6 +23,13 @@ class WorkoutData {
     return workoutList;
   }
 
+  // продолжительность тренировки
+  int numberOfExercisesWorkout(String workoutName) {
+    Workout relevantWorkout = getRelevantWorkout(workoutName);
+
+    return relevantWorkout.exercise.length;
+  }
+
   // добавить тренировку
   void addWorkout(String name) {
     // dobavili novuy trinirovku v obshiy spisok trenirovok
@@ -47,14 +54,23 @@ class WorkoutData {
   // отметить упражнение после его завершения
   void checkOffExercise(String workoutName, String exerciseName) {
     // kakuy trenirovku mi rassmatrivaem
-
+    Exercise relevantExercise = getRelevantExercise(workoutName, exerciseName);
+    relevantExercise.isCompleted = !relevantExercise.isCompleted;
   }
 
-  // продолжительность тренировки
 
   Workout getRelevantWorkout(String workoutName) {
     // находим подходящую тренировку
     Workout relevantWorkout = workoutList.firstWhere((workout) => workout.name == workoutName);
     return relevantWorkout;
+  }
+
+  // poluchit sootvitstvuyshie yprajnenie
+  Exercise getRelevantExercise(String workoutName, String exerciseName) {
+    // найти тренировку
+    Workout relevantWorkout = getRelevantWorkout(workoutName);
+    // найти упражнение
+    Exercise relevantExercise = relevantWorkout.exercise.firstWhere((exercise) => exercise.name == exerciseName);
+    return relevantExercise;
   }
 }
