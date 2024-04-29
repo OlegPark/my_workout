@@ -1,8 +1,16 @@
+import 'package:flutter/material.dart';
 import 'package:my_workout/domain/models/exercise.dart';
 
 import '../domain/models/workout.dart';
 
-class WorkoutData {
+class WorkoutData extends ChangeNotifier{
+
+
+
+
+
+
+
   List<Workout> workoutList = [
     // тренировка по умолчанию стандартный пример
     Workout(
@@ -34,6 +42,8 @@ class WorkoutData {
   void addWorkout(String name) {
     // dobavili novuy trinirovku v obshiy spisok trenirovok
     workoutList.add(Workout(name: name, exercise: []));
+
+    notifyListeners();
   }
 
   // добавить упржнение
@@ -49,6 +59,8 @@ class WorkoutData {
         sets: sets
       ),
     );
+
+    notifyListeners();
   }
 
   // отметить упражнение после его завершения
@@ -56,6 +68,8 @@ class WorkoutData {
     // kakuy trenirovku mi rassmatrivaem
     Exercise relevantExercise = getRelevantExercise(workoutName, exerciseName);
     relevantExercise.isCompleted = !relevantExercise.isCompleted;
+
+    notifyListeners();
   }
 
 
