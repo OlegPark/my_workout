@@ -14,7 +14,7 @@ class WorkoutData extends ChangeNotifier{
   List<Workout> workoutList = [
     // тренировка по умолчанию стандартный пример
     Workout(
-      name: 'Верх тела',
+      name: 'Вверх тела',
       exercise: [
         Exercise(
           name: "бицепс",

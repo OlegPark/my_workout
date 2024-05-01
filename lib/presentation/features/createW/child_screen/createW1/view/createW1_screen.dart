@@ -15,12 +15,12 @@ class _CreateW1ScreenState extends State<CreateW1Screen> {
     return Consumer<WorkoutData>(
       builder: (context, value, child) => Scaffold(
         appBar: AppBar(
-        title: Text('Workout tracker'),
+        title: const Text('Workout tracker'),
         ),
         body: ListView.builder(
           itemCount: value.getWorkoutList().length,
           itemBuilder: (context, index) => ListTile(
-            title: Text('Lol'),
+            title: Text(value.getWorkoutList()[index].name),
           ),
         ),
       ),
