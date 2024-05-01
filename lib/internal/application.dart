@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:my_workout/data/workout_data.dart';
+import 'package:provider/provider.dart';
 import '../presentation/router/router.dart';
 
 class MyApp extends StatelessWidget {
@@ -6,9 +8,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      debugShowCheckedModeBanner: false,
-      routerConfig: router,
+    return ChangeNotifierProvider(
+      create: (context) => WorkoutData(),
+      child: MaterialApp.router(
+        debugShowCheckedModeBanner: false,
+        routerConfig: router,
+      ),
     );
   }
-}
+} 

@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:my_workout/presentation/UI/theme/theme.dart';
-import 'package:my_workout/presentation/features/home/widgets/home_top.dart';
+import 'package:my_workout/presentation/features/createW/widgets/createW_top.dart';
+import '../widgets/createW_bot.dart';
+import '../widgets/createW_mid.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class CreateWScreen extends StatefulWidget {
+  const CreateWScreen({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<CreateWScreen> createState() => _CreateWScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _CreateWScreenState extends State<CreateWScreen> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
@@ -22,11 +24,11 @@ class _HomeScreenState extends State<HomeScreen> {
         gap: 8,
         tabs: [
           GButton(
-            icon: Icons.home,
-            text: 'Дмой',
+            icon: Icons.create,
+            text: 'Персонализ',
           ),
           GButton(
-            icon: Icons.favorite_border,
+            icon: Icons.fitness_center,
             text: 'Старт',
           ),
           GButton(
@@ -40,9 +42,9 @@ class _HomeScreenState extends State<HomeScreen> {
         bottom: false,
         child: Column(
           children: [
-              TopPanelHome(),
-              // MidPanelH(),
-              // BotPanelHome(),
+              CReateWTop(),
+              CreateWMid(),
+              CreateWBot(),
           ],
         ),
       ),
