@@ -11,13 +11,18 @@ class CreateW1Screen extends StatefulWidget {
 
 class _CreateW1ScreenState extends State<CreateW1Screen> {
 
+  //text controller
+  final newWorkoutController = TextEditingController();
+
   //создание новой тренировки
   void createNewWorkout() {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
         title: Text('Create new workout'),
-        content: TextField(),
+        content: TextField(
+          controller: newWorkoutController,
+        ),
         actions: [
 
           //knopka sohranit
@@ -37,7 +42,12 @@ class _CreateW1ScreenState extends State<CreateW1Screen> {
   }
 
   //sohranit trenirovku
-  void save() {}
+  void save() {
+    String newWorkoutName = newWorkoutController.text;
+    Provider.of<WorkoutData>(context, listen: false).addWorkout(newWorkoutName);
+
+    Navigator.pop(context);
+  }
 
   //otmena
   void cancel() {}
