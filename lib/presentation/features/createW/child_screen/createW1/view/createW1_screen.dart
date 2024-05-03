@@ -31,7 +31,7 @@ class _CreateW1ScreenState extends State<CreateW1Screen> {
             child: Text('save'),  
           ),
 
-          //nopka otmena
+          //knopka otmena
             MaterialButton(
             onPressed: cancel,
             child: Text('cancel'),  
@@ -47,10 +47,18 @@ class _CreateW1ScreenState extends State<CreateW1Screen> {
     Provider.of<WorkoutData>(context, listen: false).addWorkout(newWorkoutName);
 
     Navigator.pop(context);
+    clear();
   }
 
   //otmena
-  void cancel() {}
+  void cancel() {
+    Navigator.pop(context);
+    clear();
+  }
+
+  void clear() {
+    newWorkoutController.clear();
+  }
 
 
   @override
