@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:my_workout/data/workout_data.dart';
 import 'package:provider/provider.dart';
 
+import '../../createW2/view/createW2_screen.dart';
+
 class CreateW1Screen extends StatefulWidget {
   const CreateW1Screen({super.key});
 
@@ -41,6 +43,18 @@ class _CreateW1ScreenState extends State<CreateW1Screen> {
     );
   }
 
+  //переход на страницу тренировки
+  void goToWorkoutpage(String workoutName) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => CreateW2Screen(
+          workoutName: workoutName,
+        ),
+      ),
+    );
+  }
+
   //sohranit trenirovku
   void save() {
     String newWorkoutName = newWorkoutController.text;
@@ -76,6 +90,10 @@ class _CreateW1ScreenState extends State<CreateW1Screen> {
           itemCount: value.getWorkoutList().length,
           itemBuilder: (context, index) => ListTile(
             title: Text(value.getWorkoutList()[index].name),
+            trailing: IconButton(
+              onPressed: () => goToWorkoutpage(value.getWorkoutList()[index].name),
+              icon: Icon(Icons.arrow_forward_ios),
+            ),
           ),
         ),
       ),
