@@ -17,7 +17,7 @@ class WorkoutData extends ChangeNotifier{
       name: 'Вверх тела',
       exercise: [
         Exercise(
-          name: "бицепс",
+          name: "сгибание на бицепс",
           weight: "10",
           reps: "10",
           sets: "3",
