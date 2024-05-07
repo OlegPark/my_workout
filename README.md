@@ -8,5 +8,9 @@
 
 </div>
 Joint fitness app project
+<div align="center">
+  
 ![Static Badge](https://img.shields.io/badge/provider%3A%206.1.1-gray?logo=flutter&labelColor=blue)
+
+</div>
 
