@@ -16,9 +16,26 @@ class _CreateW2ScreenState extends State<CreateW2Screen> {
     return Consumer<WorkoutData>(
       builder: (context, value, child) => Scaffold(
         appBar: AppBar(title: Text(widget.workoutName)),
-        body: ListView.builder(itemBuilder: (context, index) => ListTile(
-          title: Text('title'),
-        ),
+        body: ListView.builder(
+          itemCount: value.numberOfExercisesWorkout(widget.workoutName),
+          itemBuilder: (context, index) => Container(
+            color: Colors.grey,
+            child: ListTile(
+              title: Text(value.getRelevantWorkout(widget.workoutName).exercise[index].name),
+              subtitle: Row(
+                children: [
+                  //ves
+                  Chip(label: Text("${value.getRelevantWorkout(widget.workoutName).exercise[index].weight} kg")),
+            
+                  //povtoreniya
+                  Chip(label: Text("${value.getRelevantWorkout(widget.workoutName).exercise[index].reps} reps")),
+            
+                  //podhod
+                  Chip(label: Text("${value.getRelevantWorkout(widget.workoutName).exercise[index].sets} sets")),
+                ],
+              ),
+                    ),
+          ),
         ),
       ),
     );
