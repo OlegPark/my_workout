@@ -12,11 +12,43 @@ class CreateW2Screen extends StatefulWidget {
 }
 
 class _CreateW2ScreenState extends State<CreateW2Screen> {
+
+  //checkbox tap
+  void onCheckBoxChanged(String workoutName, String exerciseName) {
+    Provider.of<WorkoutData>(context, listen: false)
+        .checkOffExercise(workoutName, exerciseName);
+  }
+
+  // sozdaet novoe uprajnenie
+  void createNewExercise() {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text('Create a new exercise'),
+        content: Column(
+          children: [
+            // nazvanie uprajneniya
+            
+            // ves
+
+            // povtori
+
+            // podhod
+          ],
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Consumer<WorkoutData>(
       builder: (context, value, child) => Scaffold(
         appBar: AppBar(title: Text(widget.workoutName)),
+        floatingActionButton: FloatingActionButton(
+          onPressed: createNewExercise,
+          child: Icon(Icons.add),
+        ),
         body: ListView.builder(
           itemCount: value.numberOfExercisesWorkout(widget.workoutName),
           itemBuilder: (context, index) => ExerciseTile(
@@ -40,6 +72,13 @@ class _CreateW2ScreenState extends State<CreateW2Screen> {
                 .getRelevantWorkout(widget.workoutName)
                 .exercise[index]
                 .isCompleted,
+            onCheckBoxChanged: (val) => onCheckBoxChanged(
+              widget.workoutName,
+              value
+                  .getRelevantWorkout(widget.workoutName)
+                  .exercise[index]
+                  .name,
+            ),
           ),
         ),
       ),

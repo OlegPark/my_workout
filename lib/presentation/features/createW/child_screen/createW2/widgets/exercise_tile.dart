@@ -6,14 +6,16 @@ class ExerciseTile extends StatelessWidget {
   final String reps;
   final String sets;
   final bool isCompleted;
+  void Function(bool?)? onCheckBoxChanged;
 
-  const ExerciseTile({
+  ExerciseTile({
     super.key,
     required this.exerciseName,
     required this.weight,
     required this.reps,
     required this.sets,
     required this.isCompleted,
+    required this.onCheckBoxChanged,
   });
 
   @override
@@ -25,7 +27,7 @@ class ExerciseTile extends StatelessWidget {
         subtitle: Row(
           children: [
             //ves
-            Chip(label: Text("${weight}kg")),
+            Chip(label: Text("${weight} kg")),
             
             //povtoreniya
             Chip(label: Text("$reps reps")),
@@ -33,6 +35,9 @@ class ExerciseTile extends StatelessWidget {
             //podhod
             Chip(label: Text("$sets sets")),
           ],
+        ),trailing: Checkbox(
+          value: isCompleted,
+          onChanged: (value) => onCheckBoxChanged!(value),
         ),
       ),
     );
