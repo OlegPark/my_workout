@@ -19,25 +19,90 @@ class _CreateW2ScreenState extends State<CreateW2Screen> {
         .checkOffExercise(workoutName, exerciseName);
   }
 
+  //text controller
+  final exerciseNameController = TextEditingController();
+  final weightController = TextEditingController();
+  final repsController = TextEditingController();
+  final setsController = TextEditingController();
+
+
   // sozdaet novoe uprajnenie
   void createNewExercise() {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: Text('Create a new exercise'),
+        title: Text('Add a new exercise'),
         content: Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
             // nazvanie uprajneniya
-            
+            TextField(
+              controller: exerciseNameController,
+            ),
+
             // ves
+            TextField(
+              controller: weightController,
+            ),
 
             // povtori
+            TextField(
+              controller: repsController,
+            ),
 
             // podhod
+            TextField(
+              controller: setsController,
+            ),
           ],
         ),
+        actions: [
+           //knopka sohranit
+          MaterialButton(
+            onPressed: save,
+            child: Text('save'),  
+          ),
+
+          //knopka otmena
+            MaterialButton(
+            onPressed: cancel,
+            child: Text('cancel'),  
+          ),
+        ],
       ),
     );
+  }
+
+  //sohranit trenirovku
+  void save() {
+    String newExerciseName = exerciseNameController.text;
+    String weight = weightController.text;
+    String reps = repsController.text;
+    String sets = setsController.text;
+
+    Provider.of<WorkoutData>(context, listen: false).addExercise(
+      widget.workoutName,
+      newExerciseName,
+      weight,
+      reps,
+      sets,
+    );
+
+    Navigator.pop(context);
+    clear();
+  }
+
+  //otmena
+  void cancel() {
+    Navigator.pop(context);
+    clear();
+  }
+
+  void clear() {
+    exerciseNameController.clear();
+    weightController.clear();
+    repsController.clear();
+    setsController.clear();
   }
 
   @override
