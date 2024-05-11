@@ -34,6 +34,7 @@ dependencies:
   go_router: ^13.1.0
   google_nav_bar: ^5.0.6
   provider: ^6.1.2
+  hive: ^2.2.3
 
 dev_dependencies:
   flutter_test:
