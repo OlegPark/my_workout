@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
+import '../../UI/theme/theme.dart';
 
-class Nikita14let extends StatelessWidget {
-  const Nikita14let({super.key});
+class StartWorkoutScreen extends StatelessWidget {
+  const StartWorkoutScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
-    ///sosamba
-    var d = 3;
+    return const Scaffold(
+      backgroundColor: backgroundDark,
+      body: Center(child: Text('Start workout screen', style: TextStyle(color: Colors.white),))
+    );
   }
 }
