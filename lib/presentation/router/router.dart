@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:my_workout/internal/gnav_bar.dart';
 import 'package:my_workout/presentation/features/auth/auth.dart';
 import 'package:my_workout/presentation/features/createAcc/desiredWeight/desiredWeight.dart';
 import 'package:my_workout/presentation/features/createAcc/performance/performance.dart';
 import 'package:my_workout/presentation/features/createAcc/signup/signup.dart';
 import 'package:my_workout/presentation/features/createW/child_screen/createW1/view/createW1_screen.dart';
-import 'package:my_workout/presentation/features/createW/view/createW_screen.dart';
 import 'package:my_workout/presentation/features/welcome/welcome.dart';
 import 'package:my_workout/presentation/features/createAcc/gender/gender.dart';
 import 'package:my_workout/presentation/features/createAcc/height/height.dart';
@@ -102,7 +102,7 @@ final router = GoRouter(
     ),
     GoRoute(
       path: '/home',
-      builder: (context, state) => const CreateWScreen(),
+      builder: (context, state) => const GoogleNavBar(),
     ),
     GoRoute(
       path: '/createW1',
