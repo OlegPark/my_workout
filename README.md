@@ -12,6 +12,7 @@ Joint fitness app project
   
 ![Static Badge](https://img.shields.io/badge/provider%3A%206.1.1-gray?logo=flutter&labelColor=blue)
 ![Static Badge](https://img.shields.io/badge/%20hive%3A%202.2.3-gray?logo=Flutter&labelColor=blue)
+![Static Badge](https://img.shields.io/badge/go_router%3A%2013.1.0-gray?logo=Flutter&labelColor=blue)
 
 </div>
 
