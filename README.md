@@ -1,4 +1,4 @@
-<h1 align="center">my_workout</h1>
+<h1 align="center">My_workout</h1>
 
 <div align="center">
 
@@ -6,8 +6,10 @@
 [![Dart](https://img.shields.io/badge/Dart-30B7F3?logo=dart&style=for-the-badge&logoColor=white)](https://dart.dev/)
 ![Static Badge](https://img.shields.io/badge/Platform-Android%20%7C%20IOS%20%7C%20Web-green)
 
-</div>
-Joint fitness app project
+<p align="center">
+Fitness apps to track your progress
+</p>
+
 <div align="center">
   
 ![Static Badge](https://img.shields.io/badge/provider%3A%206.1.1-gray?logo=flutter&labelColor=blue)
