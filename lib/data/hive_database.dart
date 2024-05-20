@@ -23,12 +23,28 @@ class HiveDatabase {
     return _myBox.get("START_DATE");
   }
 
-  void saveToDatabase(List<Workout> workoutList) {
-    
+  void saveToDatabase(List<Workout> workouts) {
+    final workoutList = convertObjectToWorkoutList(workouts);
+    final exerciseList = convertObjectToExerciseList(workouts);
+
+    if(exerciseCompleted(workouts)) {
+      
+    }
+  }
+
+  bool exerciseCompleted(List<Workout> workouts) {
+    for (var workout in workouts) {
+      for (var exercise in workout.exercise) {
+        if (exercise.isCompleted) {
+          return false;
+        }
+      }
+    }
+    return true;
   }
 }
 
-List <String> convertOjectToWorkoutList(List<Workout> workouts) {
+List <String> convertObjectToWorkoutList(List<Workout> workouts) {
     List <String> workoutList = [
       
     ];
@@ -41,7 +57,7 @@ List <String> convertOjectToWorkoutList(List<Workout> workouts) {
     return workoutList;
   }
 
-List<List<List<String>>> convertOjectToExerciseList(List<Workout> workouts) {
+List<List<List<String>>> convertObjectToExerciseList(List<Workout> workouts) {
   List<List<List<String>>> exerciseList = [
       
   ];
