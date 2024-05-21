@@ -62,7 +62,7 @@ class HiveDatabase {
         name: workoutNames[i],
         exercise: exercisesInEachWorkout
       );
-      
+
       mySavedWorkouts.add(workout);
     }
 
@@ -78,6 +78,11 @@ class HiveDatabase {
       }
     }
     return true;
+  }
+
+  int getCompletionStatus(String yyyymmdd) {
+    int completionStatus = _myBox.get("COMPLETION_STATUS_$yyyymmdd") ?? 0;
+    return completionStatus;
   }
 }
 
