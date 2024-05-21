@@ -28,8 +28,45 @@ class HiveDatabase {
     final exerciseList = convertObjectToExerciseList(workouts);
 
     if(exerciseCompleted(workouts)) {
-      
+      _myBox.put("COMPLETION_STATUS_${todaysDateYYYYMMDD()}", 1);
+    } else{
+      _myBox.put("COMPLETION_STATUS_${todaysDateYYYYMMDD()}", 0);
     }
+
+    _myBox.put("WORKOUTS", workoutList);
+    _myBox.put("EXERCISES", exerciseList);
+  }
+
+  List<Workout> readFromDatabase() {
+    List<Workout> mySavedWorkouts = [];
+
+    List<String> workoutNames = _myBox.get("WORKOUTS");
+    final exerciseDetails = _myBox.get("EXERCISES");
+
+    for (int i = 0; i < workoutNames.length; i++) {
+      List<Exercise> exercisesInEachWorkout = [];
+
+      for (int j = 0; j < exerciseDetails[i].length; j++) {
+        exercisesInEachWorkout.add(
+          Exercise(
+            name: exerciseDetails[i][j][0],
+            weight: exerciseDetails[i][j][1],
+            reps: exerciseDetails[i][j][2],
+            sets: exerciseDetails[i][j][3],
+            isCompleted: exerciseDetails[i][j][4] == "true" ? true : false,
+          ),
+        );
+      }
+
+      Workout workout = Workout(
+        name: workoutNames[i],
+        exercise: exercisesInEachWorkout
+      );
+      
+      mySavedWorkouts.add(workout);
+    }
+
+    return mySavedWorkouts;
   }
 
   bool exerciseCompleted(List<Workout> workouts) {
