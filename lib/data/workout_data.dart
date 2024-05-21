@@ -1,30 +1,37 @@
 import 'package:flutter/material.dart';
+import 'package:my_workout/data/hive_database.dart';
 import 'package:my_workout/domain/models/exercise.dart';
 
 import '../domain/models/workout.dart';
 
 class WorkoutData extends ChangeNotifier{
 
-
-
-
-
+  final db = HiveDatabase();
 
 
   List<Workout> workoutList = [
     // тренировка по умолчанию стандартный пример
-    Workout(
-      name: 'Вверх тела',
-      exercise: [
-        Exercise(
-          name: "сгибание на бицепс",
-          weight: "10",
-          reps: "10",
-          sets: "3",
-        ),
-      ],
-    ),
+    // Workout(
+    //   name: 'Вверх тела',
+    //   exercise: [
+    //     Exercise(
+    //       name: "сгибание на бицепс",
+    //       weight: "10",
+    //       reps: "10",
+    //       sets: "3",
+    //     ),
+    //   ],
+    // ),
   ];
+
+  void initalizeWorkoutList() {
+    if (db.previousDataExists()) {
+      workoutList = db.readFromDatabase();
+    } 
+    else {
+      db.saveToDatabase(workoutList);
+    }
+  }
   
   // метод для получения списка тренировок
   List<Workout> getWorkoutList() {
