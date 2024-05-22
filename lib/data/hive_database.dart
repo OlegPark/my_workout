@@ -1,12 +1,11 @@
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:my_workout/domain/datetime/date_time.dart';
-import 'package:my_workout/domain/models/exercise.dart';
-
+import '../domain/models/exercise.dart';
 import '../domain/models/workout.dart';
 
 class HiveDatabase {
 
-  final _myBox = Hive.box('workout_database');
+  final _myBox = Hive.box('workout_database1');
 
   bool previousDataExists() {
     if (_myBox.isEmpty) {

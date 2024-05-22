@@ -31,7 +31,7 @@ class _CreateW2ScreenState extends State<CreateW2Screen> {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: Text('Add a new exercise'),
+        title: Text('Добавить новое упражнение'),
         content: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -60,13 +60,13 @@ class _CreateW2ScreenState extends State<CreateW2Screen> {
            //knopka sohranit
           MaterialButton(
             onPressed: save,
-            child: Text('save'),  
+            child: Text('сохранить'),  
           ),
 
           //knopka otmena
             MaterialButton(
             onPressed: cancel,
-            child: Text('cancel'),  
+            child: Text('отмена'),  
           ),
         ],
       ),

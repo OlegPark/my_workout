@@ -51,6 +51,7 @@ class WorkoutData extends ChangeNotifier{
     workoutList.add(Workout(name: name, exercise: []));
 
     notifyListeners();
+    db.saveToDatabase(workoutList);
   }
 
   // добавить упржнение
@@ -77,6 +78,7 @@ class WorkoutData extends ChangeNotifier{
     relevantExercise.isCompleted = !relevantExercise.isCompleted;
 
     notifyListeners();
+    db.saveToDatabase(workoutList);
   }
 
 
