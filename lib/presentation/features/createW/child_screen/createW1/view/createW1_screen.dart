@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_workout/data/workout_data.dart';
 import 'package:provider/provider.dart';
-
 import '../../createW2/view/createW2_screen.dart';
 
 class CreateW1Screen extends StatefulWidget {
@@ -13,6 +12,13 @@ class CreateW1Screen extends StatefulWidget {
 
 class _CreateW1ScreenState extends State<CreateW1Screen> {
 
+  @override
+  void initState() {
+    super.initState();
+
+    Provider.of<WorkoutData>(context, listen: false).initalizeWorkoutList();
+  }
+
   //text controller
   final newWorkoutController = TextEditingController();
 
@@ -21,7 +27,7 @@ class _CreateW1ScreenState extends State<CreateW1Screen> {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: Text('Create new workout'),
+        title: Text('Создайте новую тренировку'),
         content: TextField(
           controller: newWorkoutController,
         ),
@@ -80,7 +86,7 @@ class _CreateW1ScreenState extends State<CreateW1Screen> {
     return Consumer<WorkoutData>(
       builder: (context, value, child) => Scaffold(
         appBar: AppBar(
-        title: const Text('Workout tracker'),
+        title: const Text('Список тренировок'),
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: createNewWorkout,
