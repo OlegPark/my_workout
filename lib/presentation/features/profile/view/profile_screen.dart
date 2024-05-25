@@ -13,7 +13,7 @@ class ProfileScreen extends StatelessWidget {
         child: Column(
           children: [
             Center(child: Text('Profile screen', style: wText)),
-            MyHeatMap(),
+            
           ],
         ),
       ),
