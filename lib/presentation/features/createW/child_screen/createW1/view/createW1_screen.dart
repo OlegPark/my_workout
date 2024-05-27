@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:my_workout/data/workout_data.dart';
 import 'package:provider/provider.dart';
 import '../../createW2/view/createW2_screen.dart';
@@ -86,6 +87,12 @@ class _CreateW1ScreenState extends State<CreateW1Screen> {
     return Consumer<WorkoutData>(
       builder: (context, value, child) => Scaffold(
         appBar: AppBar(
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back),
+            onPressed: () {
+                context.go('/home');
+              },
+          ),
         title: const Text('Список тренировок'),
         ),
         floatingActionButton: FloatingActionButton(
