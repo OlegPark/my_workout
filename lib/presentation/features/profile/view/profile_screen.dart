@@ -16,6 +16,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     return Consumer<WorkoutData>(
       builder: (context, value, child) => Scaffold(
+        appBar: AppBar(
+          backgroundColor: backgroundDark,
+          title: Text(
+            'Мой прогресс',
+            style: TextStyle(
+              color: Colors.white
+            ),
+          ),
+        ),
         backgroundColor: backgroundDark,
         body: ListView(
           children: [
