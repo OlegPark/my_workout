@@ -58,7 +58,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             Container(
               height: 300,
               width: 300,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(image: AssetImage('assets/images/bodymap.jpg'))
               ),
             )
