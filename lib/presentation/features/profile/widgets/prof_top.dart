@@ -8,6 +8,51 @@ class TopPanelProf extends StatefulWidget {
 }
 
 class _TopPanelProfState extends State<TopPanelProf> {
+
+  void showImagePikcherOption(BuildContext context) {
+    showModalBottomSheet(
+      backgroundColor: Colors.grey,
+      context: context,
+      builder: (builder){
+        return Padding(
+          padding: const EdgeInsets.all(18.0),
+          child: SizedBox(
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.width/4,
+            child: Row(
+              children: [
+                Expanded(
+                  child: InkWell(
+                    onTap: (){},
+                    child: const SizedBox(
+                      child: Column(
+                        children: [
+                          Icon(Icons.image, size: 70,), Text('Галерея'),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: InkWell(
+                    onTap: (){},
+                    child: const SizedBox(
+                      child: Column(
+                        children: [
+                          Icon(Icons.camera_alt, size: 70,), Text('Камера'),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -23,7 +68,9 @@ class _TopPanelProfState extends State<TopPanelProf> {
               Positioned(
                 bottom: -14,
                 left: 60,
-                child: IconButton(onPressed: () {}, icon: Icon(Icons.add_a_photo), color: Colors.white,),
+                child: IconButton(onPressed: () {
+                  showImagePikcherOption(context);
+                }, icon: Icon(Icons.add_a_photo), color: Colors.white,),
               ),
             ],
           ),
