@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_workout/data/workout_data.dart';
 import 'package:my_workout/presentation/features/profile/widgets/heat_map.dart';
+import 'package:my_workout/presentation/features/profile/widgets/prof_top.dart';
 import 'package:provider/provider.dart';
 import '../../../UI/theme/theme.dart';
 
@@ -36,19 +37,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         backgroundColor: backgroundDark,
         body: ListView(
           children: [
-            const Padding(
-              padding: EdgeInsets.only(left: 20),
-              child: Row(
-                children: [
-                  Icon(Icons.circle, color: Colors.grey, size: 90,),
-                  SizedBox(width: 10,),
-                  Padding(
-                    padding: EdgeInsets.only(top: 20),
-                    child: Text('Олег Пак', style: TextStyle(color: Colors.white, fontSize: 25),),
-                  ),
-                ],
-              ),
-            ),
+            TopPanelProf(),
             const SizedBox(height: 20,),
             const Center(child: Text('График тренировок', style: TextStyle(color: Colors.white, fontSize: 18),)),
             MyHeatMap(datasets: value.heatMapDataSet, startDateYYYYMMDD: value.getStartDate()),
