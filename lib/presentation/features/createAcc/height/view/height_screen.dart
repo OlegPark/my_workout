@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// import '../widgets/height_bot.dart';
+import '../widgets/tile.dart';
 // import '../widgets/height_mid.dart';
 // import '../widgets/height_top.dart';
 
@@ -14,40 +14,14 @@ class _HeightScreenState extends State<HeightScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListWheelScrollView(
+      body: ListWheelScrollView.useDelegate(
         itemExtent: 50,
-        perspective: 0.01,
-        diameterRatio: 1,
-        children: [
-          Container(
-            color: Colors.blue,
-            child: Center(child: Text('Hello')),
-          ),
-           Container(
-            color: Colors.blue,
-            child: Center(child: Text('Hello')),
-          ),
-           Container(
-            color: Colors.blue,
-            child: Center(child: Text('Hello')),
-          ),
-          Container(
-            color: Colors.blue,
-            child: Center(child: Text('Hello')),
-          ),
-          Container(
-            color: Colors.blue,
-            child: Center(child: Text('Hello')),
-          ),
-          Container(
-            color: Colors.blue,
-            child: Center(child: Text('Hello')),
-          ),
-          Container(
-            color: Colors.blue,
-            child: Center(child: Text('Hello')),
-          ),
-        ],
+        childDelegate: ListWheelChildBuilderDelegate(
+          childCount: 15,
+          builder: (context, index) {
+            return MtTile();
+          },
+        )
       ),
     );
   }
