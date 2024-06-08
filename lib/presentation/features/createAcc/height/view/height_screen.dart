@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../widgets/tile.dart';
+import '../../../../UI/theme/theme.dart';
+import '../widgets/heightscroll.dart';
 // import '../widgets/height_mid.dart';
 // import '../widgets/height_top.dart';
 
@@ -14,12 +15,15 @@ class _HeightScreenState extends State<HeightScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: backgroundDark,
       body: ListWheelScrollView.useDelegate(
         itemExtent: 50,
         childDelegate: ListWheelChildBuilderDelegate(
-          childCount: 15,
+          childCount: 100,
           builder: (context, index) {
-            return MtTile();
+            return MyHeight(
+              heightU: index,
+            );
           },
         )
       ),
