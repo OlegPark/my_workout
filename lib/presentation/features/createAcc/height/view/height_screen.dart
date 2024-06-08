@@ -18,6 +18,8 @@ class _HeightScreenState extends State<HeightScreen> {
       backgroundColor: backgroundDark,
       body: ListWheelScrollView.useDelegate(
         itemExtent: 50,
+        useMagnifier: true,
+        magnification: 1.5,
         childDelegate: ListWheelChildBuilderDelegate(
           childCount: 100,
           builder: (context, index) {
