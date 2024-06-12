@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:my_workout/presentation/features/createAcc/height/widgets/height_bot.dart';
 import '../../../../UI/theme/theme.dart';
+import '../widgets/height_top.dart';
 import '../widgets/heightscroll.dart';
-// import '../widgets/height_mid.dart';
-// import '../widgets/height_top.dart';
+import '../widgets/height_mid.dart';
 
 class HeightScreen extends StatefulWidget {
   const HeightScreen({super.key});
@@ -16,18 +17,40 @@ class _HeightScreenState extends State<HeightScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: backgroundDark,
-      body: ListWheelScrollView.useDelegate(
-        itemExtent: 50,
-        useMagnifier: true,
-        magnification: 1.5,
-        childDelegate: ListWheelChildBuilderDelegate(
-          childCount: 100,
-          builder: (context, index) {
-            return MyHeight(
-              heightU: index,
-            );
-          },
-        )
+      body: Column(
+        children: [
+          Expanded(child: TopPanelH()),
+          Container(
+            padding: const EdgeInsets.only(top: 212),
+            child: const Text(
+              'Рост',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 25,
+                fontWeight: FontWeight.w900,
+              ),
+            ),
+          ),
+          Expanded(
+            child: ListWheelScrollView.useDelegate(
+              itemExtent: 50,
+              perspective: 0.005,
+              diameterRatio: 0.88,
+              useMagnifier: true,
+              magnification: 1.5,
+              physics: FixedExtentScrollPhysics(),
+              childDelegate: ListWheelChildBuilderDelegate(
+                childCount: 210,
+                builder: (context, index) {
+                  return MyHeight(
+                    heightU: index,
+                  );
+                },
+              )
+            ),
+          ),
+          Expanded(child: BotPanelH()),
+        ],
       ),
     );
   }
