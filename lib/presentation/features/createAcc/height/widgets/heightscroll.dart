@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class MyHeight extends StatelessWidget {
   int heightU;
   MyHeight({required this.heightU});
@@ -9,7 +10,7 @@ class MyHeight extends StatelessWidget {
     return Center(
       child: Text(
         heightU.toString(),
-        style: TextStyle(
+        style: const TextStyle(
           fontSize: 30,
           color: Colors.white,
           fontWeight: FontWeight.bold,
