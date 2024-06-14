@@ -12,6 +12,14 @@ class HeightScreen extends StatefulWidget {
 }
 
 class _HeightScreenState extends State<HeightScreen> {
+  late FixedExtentScrollController _controllerh;
+
+  @override
+  void initState() {
+    super.initState();
+    _controllerh = FixedExtentScrollController();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,18 +42,20 @@ class _HeightScreenState extends State<HeightScreen> {
             children: [
               TopPanelH(),
               Container(
-                padding: const EdgeInsets.only(top: 212),
+                padding: const EdgeInsets.only(top: 185),
                 child: const Text(
                   'Рост',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 25,
+                    fontSize: 30,
                     fontWeight: FontWeight.w900,
                   ),
                 ),
               ),
+              const SizedBox(height: 20),
               Expanded(
                 child: ListWheelScrollView.useDelegate(
+                  controller: _controllerh,
                   itemExtent: 50,
                   perspective: 0.002,
                   diameterRatio: 0.88,
