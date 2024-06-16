@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:my_workout/presentation/features/createAcc/height/widgets/height_bot.dart';
-import '../../../../UI/theme/theme.dart';
 import '../widgets/height_top.dart';
 import '../widgets/heightscroll.dart';
 
@@ -23,7 +22,6 @@ class _HeightScreenState extends State<HeightScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: backgroundDark,
       body: SafeArea(
         top: false,
         bottom: false,
