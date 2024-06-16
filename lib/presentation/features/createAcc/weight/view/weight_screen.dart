@@ -3,9 +3,14 @@ import '../widget/weight_bot.dart';
 import '../widget/weight_mid.dart';
 import '../widget/weight_top.dart';
 
-class WeightScreen extends StatelessWidget {
+class WeightScreen extends StatefulWidget {
   const WeightScreen({super.key});
 
+  @override
+  State<WeightScreen> createState() => _WeightScreenState();
+}
+
+class _WeightScreenState extends State<WeightScreen> {
  @override
   Widget build(BuildContext context) {
     return Scaffold(
