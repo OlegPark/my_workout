@@ -10,7 +10,7 @@ class BotPanelWeigh extends StatelessWidget {
     return Column(
       children: [
          Padding(
-           padding: const EdgeInsets.only(top: 215),
+           padding: const EdgeInsets.only(top: 121),
            child: GestureDetector(
             onTap: () => context.go('/dweight'),
             child: Container(
