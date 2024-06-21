@@ -3,8 +3,21 @@ import '../widget/dweight_bot.dart';
 import '../widget/dweight_mid.dart';
 import '../widget/dweight_top.dart';
 
-class DesiredWScreen extends StatelessWidget {
+class DesiredWScreen extends StatefulWidget {
   const DesiredWScreen({super.key});
+
+  @override
+  State<DesiredWScreen> createState() => _DesiredWScreenState();
+}
+
+class _DesiredWScreenState extends State<DesiredWScreen> {
+  late FixedExtentScrollController _controllerdw;
+
+  @override
+  void initState() {
+    super.initState();
+    _controllerdw = FixedExtentScrollController();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -21,10 +34,31 @@ class DesiredWScreen extends StatelessWidget {
               fit: BoxFit.cover,
             )
           ),
-          child: const Column(
+          child: Column(
             children: [
               TopPanelDW(),
-              MidPanelDW(),
+              Container(
+                padding: const EdgeInsets.only(top: 160),
+                child: const Text(
+                  'Желаемый',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 30,
+                    fontWeight: FontWeight.w900,
+                  ),
+                ),
+              ),
+              Container(
+                child: const Text(
+                  'вес',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 30,
+                    fontWeight: FontWeight.w900,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 20),
               BotPanelDW(),
             ],
           ),
