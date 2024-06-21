@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../widget/dweight_bot.dart';
-import '../widget/dweight_mid.dart';
 import '../widget/dweight_top.dart';
+import '../widget/dweightscroll.dart';
 
 class DesiredWScreen extends StatefulWidget {
   const DesiredWScreen({super.key});
@@ -36,7 +36,7 @@ class _DesiredWScreenState extends State<DesiredWScreen> {
           ),
           child: Column(
             children: [
-              TopPanelDW(),
+              const TopPanelDW(),
               Container(
                 padding: const EdgeInsets.only(top: 160),
                 child: const Text(
@@ -59,7 +59,26 @@ class _DesiredWScreenState extends State<DesiredWScreen> {
                 ),
               ),
               const SizedBox(height: 20),
-              BotPanelDW(),
+              Expanded(
+                child: ListWheelScrollView.useDelegate(
+                  controller: _controllerdw,
+                  itemExtent: 50,
+                  perspective: 0.002,
+                  diameterRatio: 0.88,
+                  useMagnifier: true,
+                  magnification: 1.3,
+                  physics: const FixedExtentScrollPhysics(),
+                  childDelegate: ListWheelChildBuilderDelegate(
+                    childCount: 210,
+                    builder: (context, index) {
+                      return MyDWeight(
+                        dweightU: index,
+                      );
+                    },
+                  )
+                ),
+              ),
+              const Expanded(child: BotPanelDW()),
             ],
           ),
         ),
