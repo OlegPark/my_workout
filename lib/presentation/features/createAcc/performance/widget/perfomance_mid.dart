@@ -76,17 +76,14 @@ class MidPanelPerf extends StatelessWidget {
               height: 40,
               width: 100,
               alignment: Alignment.center,
-              // child: TextField(
-              //   textAlign: TextAlign.center,
-              //   style: TextStyle(fontSize: 20, color: Colors.grey, fontWeight: FontWeight.w900),
-              //   keyboardType: TextInputType.number,
-              //   decoration: InputDecoration(
-              //     border: InputBorder.none,
-              //     // hintText: '0',
-              //   ),
-              //   maxLength: 4,
-              //   maxLengthEnforcement: MaxLengthEnforcement.enforced,
-              // ),
+              child: TextField(
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 20, color: Colors.grey, fontWeight: FontWeight.w900),
+                keyboardType: TextInputType.number,
+                decoration: InputDecoration(
+                  border: InputBorder.none,
+                ),
+              ),
             ),
             Container(
               decoration: BoxDecoration(
@@ -96,6 +93,14 @@ class MidPanelPerf extends StatelessWidget {
               height: 40,
               width: 100,
               alignment: Alignment.center,
+              child: TextField(
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 20, color: Colors.grey, fontWeight: FontWeight.w900),
+                keyboardType: TextInputType.number,
+                decoration: InputDecoration(
+                  border: InputBorder.none,
+                ),
+              ),
             ),
           ],
         ),
@@ -157,6 +162,14 @@ class MidPanelPerf extends StatelessWidget {
               height: 40,
               width: 100,
               alignment: Alignment.center,
+              child: TextField(
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 20, color: Colors.grey, fontWeight: FontWeight.w900),
+                keyboardType: TextInputType.number,
+                decoration: InputDecoration(
+                  border: InputBorder.none,
+                ),
+              ),
             ),
             Container(
               decoration: BoxDecoration(
@@ -166,6 +179,14 @@ class MidPanelPerf extends StatelessWidget {
               height: 40,
               width: 100,
               alignment: Alignment.center,
+              child: TextField(
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 20, color: Colors.grey, fontWeight: FontWeight.w900),
+                keyboardType: TextInputType.number,
+                decoration: InputDecoration(
+                  border: InputBorder.none,
+                ),
+              ),
             ),
           ],
         ),
