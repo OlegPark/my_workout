@@ -73,10 +73,10 @@ class MidPanelPerf extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10),
                 border: Border.all(color: const Color.fromARGB(255, 100, 100, 100), width: 3),
               ),
-              height: 40,
+              height: 44,
               width: 100,
               alignment: Alignment.center,
-              child: TextField(
+              child: const TextField(
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 20, color: Colors.grey, fontWeight: FontWeight.w900),
                 keyboardType: TextInputType.number,
@@ -90,10 +90,10 @@ class MidPanelPerf extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10),
                 border: Border.all(color: const Color.fromARGB(255, 100, 100, 100), width: 3),
               ),
-              height: 40,
+              height: 44,
               width: 100,
               alignment: Alignment.center,
-              child: TextField(
+              child: const TextField(
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 20, color: Colors.grey, fontWeight: FontWeight.w900),
                 keyboardType: TextInputType.number,
@@ -159,10 +159,10 @@ class MidPanelPerf extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10),
                 border: Border.all(color: const Color.fromARGB(255, 100, 100, 100), width: 3),
               ),
-              height: 40,
+              height: 44,
               width: 100,
               alignment: Alignment.center,
-              child: TextField(
+              child: const TextField(
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 20, color: Colors.grey, fontWeight: FontWeight.w900),
                 keyboardType: TextInputType.number,
@@ -176,10 +176,10 @@ class MidPanelPerf extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10),
                 border: Border.all(color: const Color.fromARGB(255, 100, 100, 100), width: 3),
               ),
-              height: 40,
+              height: 44,
               width: 100,
               alignment: Alignment.center,
-              child: TextField(
+              child: const TextField(
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 20, color: Colors.grey, fontWeight: FontWeight.w900),
                 keyboardType: TextInputType.number,
