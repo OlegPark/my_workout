@@ -105,45 +105,57 @@ class MidPanelPerf extends StatelessWidget {
           ],
         ),
         const SizedBox(height: 35),
-        const Row(
+        Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Column(
               children: [
-                Text(
-                  'Макс.',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 14,
-                    fontWeight: FontWeight.w900
+                Container(
+                  margin: const EdgeInsets.only(right: 19),
+                  child: const Text(
+                    'Макс.',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w900
+                    ),
                   ),
                 ),
-                Text(
-                  'приседаний',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 14,
-                    fontWeight: FontWeight.w900
+                Container(
+                  margin: const EdgeInsets.only(right: 19),
+                  child: const Text(
+                    'приседаний',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w900
+                    ),
                   ),
                 ),
               ],
             ),
             Column(
               children: [
-                Text(
-                  'Макс.',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 14,
-                    fontWeight: FontWeight.w900
+                Container(
+                  margin: const EdgeInsets.only(right: 15),
+                  child: const Text(
+                    'Макс.',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w900
+                    ),
                   ),
                 ),
-                Text(
-                  'брусья',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 14,
-                    fontWeight: FontWeight.w900
+                Container(
+                  margin: const EdgeInsets.only(right: 15),
+                  child: const Text(
+                    'брусья',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w900
+                    ),
                   ),
                 ),
               ],
