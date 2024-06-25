@@ -82,6 +82,7 @@ class MidPanelPerf extends StatelessWidget {
                 keyboardType: TextInputType.number,
                 decoration: InputDecoration(
                   border: InputBorder.none,
+
                 ),
               ),
             ),
