@@ -18,7 +18,7 @@ class MidPanelPerf extends StatelessWidget {
             ),
           ),
         ),
-        const SizedBox(height: 46),
+        SizedBox(height: 46),
         const Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
