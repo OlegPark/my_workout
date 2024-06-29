@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
-class MidPanelG extends StatelessWidget {
+class MidPanelG extends StatefulWidget {
   const MidPanelG({super.key});
 
+  @override
+  State<MidPanelG> createState() => _MidPanelGState();
+}
+
+class _MidPanelGState extends State<MidPanelG> {
   @override
   Widget build(BuildContext context) {
     return Column(
