@@ -28,11 +28,17 @@ class _MidPanelGState extends State<MidPanelG> {
           children: [
             Container(
               margin: const EdgeInsets.only(top: 34),
-              child: Image.asset('assets/images/man.png'),
+              height: 130,
+              width: 130,
+              color: Colors.white,
+              // child: Image.asset('assets/images/man.png'),
             ),
             Container(
               margin: const EdgeInsets.only(top: 34),
-              child: Image.asset('assets/images/woman.png'),
+              width: 130,
+              height: 130,
+              color: Colors.white,
+              // child: Image.asset('assets/images/woman.png'),
             ),
           ],
         ),
